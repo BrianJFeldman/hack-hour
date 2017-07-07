@@ -26,6 +26,12 @@ Challange:
   ** keep in mind time complexity
 */
 function missingNum(Array) {
+  let max = -1;
+  let sum = 0;
+  Array.forEach((ele)=>{
+    if (ele>max) max = ele;
+    sum += ele;
+  })
+  return ((max*(max+1))/2)-sum
 }
-
 module.exports = missingNum;

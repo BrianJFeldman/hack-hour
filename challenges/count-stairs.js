@@ -15,12 +15,14 @@
  */
 
 function countStairs(n) {
-    function fib(n,obj = {"0":1, "1":1}){
-        if (obj[n]) return obj[n]
-        obj[n]= fib(n - 1,obj) + fib(n - 2,obj)
-        return obj[n];
+    let obj = {"0":0, "1":1}
+    function fib(n){
+        // if(n<=2) return 1
+        // return fib(n-1) + fib(n-2)
+        if (obj[n] !== undefined) return obj[n]
+        return obj[n]= fib(n - 1) + fib(n - 2)
     }
     return fib(n)
 }
-
+console.log(countStairs(1477))
 module.exports = countStairs;

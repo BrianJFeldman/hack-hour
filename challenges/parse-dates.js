@@ -43,4 +43,6 @@ function parseDates(str) {
   
 }
 
+console.log("Jan 1st".toDate())
+
 module.exports = parseDates;
